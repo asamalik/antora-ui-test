@@ -1,0 +1,69 @@
+div.home-page div.container-header {
+    background-color: #ddd;
+    padding: 20px 20px 0;
+}
+
+div.home-page div.container-header h2{
+    background-color: #ddd;
+    margin: 0;
+}
+
+div.home-page div.container-releases,
+div.home-page div.container-project,
+div.home-page div.container-contributors {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+div.home-page div.container-project,
+div.home-page div.container-contributors {
+    flex-wrap: wrap;
+}
+
+div.home-page div.container-releases a,
+div.home-page div.container-project a,
+div.home-page div.container-contributors a {
+    display: block;
+    background-color: #233862;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.home-page div.container-releases h3,
+div.home-page div.container-project h3,
+div.home-page div.container-contributors h3 {
+    color: white;
+}
+
+div.home-page div.container-releases a {
+    background-color: #173E77;
+}
+
+div.home-page div.container-project a {
+    background-color: #680959;
+}
+
+div.home-page div.container-contributors a {
+    background-color: #984F15;
+}
+
+div.home-page .flex-container a.container-big {
+    flex-grow: 2;
+}
+
+div.home-page .flex-container a.container-small {
+    flex-grow: 1;
+}
+
+div.home-page .flex-container a.container-third {
+    flex-basis: 30%;
+}
+
+div.home-page .flex-container h3, .flex-container p{
+    margin: 10px;
+}
+

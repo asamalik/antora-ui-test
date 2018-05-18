@@ -1,13 +1,16 @@
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
-  {{#if page.breadcrumbs}}
+  
   <ul>
+    <li class="crumb HO"><a href="{{relativize page.url site.homeUrl}}">Home</a></li>
+    {{#if (not page.home)}}
     {{#with page.componentVersion}}
     {{#if (and ./title (not (or ./root (eq @root.page.breadcrumbs.0.content ./title))))}}
-    <li class="crumb"><a href="{{{relativize @root.page.url ./url}}}">{{{./title}}}</a></li>
+    <li class="crumb HO"><a href="{{{relativize @root.page.url ./url}}}">{{{./title}}}</a></li>
     {{/if}}
     {{/with}}
+    {{/if}}
     {{#each page.breadcrumbs}}
-    <li class="crumb">
+    <li class="crumb HA">
     {{~#if (and ./url (eq ./urlType 'internal'))~}}
     <a href="{{{relativize @root.page.url ./url}}}">{{{./content}}}</a>
     {{~else~}}
@@ -16,5 +19,5 @@
     </li>
     {{/each}}
   </ul>
-  {{/if}}
+  {{#if page.breadcrumbs}}{{/if}}
 </nav>

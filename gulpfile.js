@@ -36,6 +36,7 @@ gulp.task('build:preview', ['build'], () =>
 gulp.task('preview', ['build:preview'], () =>
   preview(previewSiteDestDir, {
     port: 5252,
+    host: "0.0.0.0",
     livereload: process.env.LIVERELOAD === 'true',
     watch: {
       src: [srcDir, previewSiteSrcDir],
@@ -44,6 +45,6 @@ gulp.task('preview', ['build:preview'], () =>
   })
 )
 
-gulp.task('pack', ['build', 'lint'], () => pack(destDir, buildDir, bundleName))
+gulp.task('pack', ['build'], () => pack(destDir, buildDir, bundleName))
 
 gulp.task('default', ['build'])
