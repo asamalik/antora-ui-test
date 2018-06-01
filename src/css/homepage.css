@@ -1,18 +1,16 @@
 div.home-page div.container-header {
-    background-color: #ddd;
-    padding: 20px 20px 0;
+    padding: 20px 10px 0;
 }
 
 div.home-page div.container-header h2{
-    background-color: #ddd;
     margin: 0;
+    border: none;
+    padding: 0;
 }
 
 div.home-page div.container-releases,
 div.home-page div.container-project,
 div.home-page div.container-contributors {
-    background-color: #ddd;
-    padding: 10px;
     margin-bottom: 30px;
     display: flex;
 }

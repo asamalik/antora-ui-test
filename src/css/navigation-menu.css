@@ -24,11 +24,13 @@ html.is-clipped--nav {
   display: none;
 }
 
+.navigation-container, .navigation-menu {
+  background-color: #ddd;
+}
+
 .nav-menu {
   flex-grow: 1;
   min-height: 0;
-  /* QUESTION move padding to .navigation-menu? */
-  padding: 0.5rem 0.25rem;
 }
 
 .nav-menu h3.title {
@@ -67,7 +69,22 @@ html.is-clipped--nav {
   align-items: flex-start;
   flex-wrap: wrap;
   list-style: none;
-  padding-top: 0.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+ul.nav-list .nav-item .is-current-page,
+ul.nav-list .nav-item .is-current-path {
+  background-color: #f5f5f5;
+}
+
+ul.nav-list ul.nav-list .nav-item,
+ul.nav-list ul.nav-list .nav-item  {
+  padding-left: 10px;
+}
+
+.nav-menu .title a {
+  margin-left: 20px;
 }
 
 .nav-item:not(.is-active) > .nav-list {

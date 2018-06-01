@@ -1,7 +1,9 @@
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
   
   <ul>
-    <li class="crumb HO"><a href="{{relativize page.url site.homeUrl}}">Home</a></li>
+    {{#if site.homeUrl}}
+      <li class="crumb HO"><a href="{{relativize page.url site.homeUrl}}">Home</a></li>
+    {{/if}} 
     {{#if (not page.home)}}
     {{#with page.componentVersion}}
     {{#if (and ./title (not (or ./root (eq @root.page.breadcrumbs.0.content ./title))))}}
